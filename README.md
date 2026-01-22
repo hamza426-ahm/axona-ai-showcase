@@ -48,26 +48,26 @@ Traditional sales intelligence tools have critical flaws:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                              AXONA AI PLATFORM                               │
+│                              AXONA AI PLATFORM                              │
 ├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                              │
+│                                                                             │
 │   ┌─────────────────────────────────────────────────────────────────────┐   │
-│   │                         PRESENTATION LAYER                           │   │
+│   │                         PRESENTATION LAYER                          │   │
 │   │  React 19 + TypeScript + Vite + Tailwind CSS                        │   │
-│   │  ├── Company Scanner UI                                              │   │
+│   │  ├── Company Scanner UI                                             │   │
 │   │  ├── Team Member Cards with Accuracy Badges                         │   │
-│   │  ├── Intent Signals Dashboard                                        │   │
-│   │  └── Data Freshness Indicators                                       │   │
+│   │  ├── Intent Signals Dashboard                                       │   │
+│   │  └── Data Freshness Indicators                                      │   │
 │   └─────────────────────────────────────────────────────────────────────┘   │
-│                                      │                                       │
-│                                      ▼                                       │
+│                                      │                                      │
+│                                      ▼                                      │
 │   ┌─────────────────────────────────────────────────────────────────────┐   │
-│   │                        INTELLIGENCE ENGINE                           │   │
-│   │                                                                      │   │
-│   │   ┌─────────────┐   ┌─────────────┐   ┌─────────────┐              │   │
-│   │   │  Gemini AI  │   │ Web Scraper │   │Legal Records│              │   │
-│   │   │  Extraction │   │  (Jina.ai)  │   │ SEC/IRS/SoS │              │   │
-│   │   └──────┬──────┘   └──────┬──────┘   └──────┬──────┘              │   │
+│   │                        INTELLIGENCE ENGINE                          │   │
+│   │                                                                     │   │
+│   │   ┌─────────────┐   ┌─────────────┐   ┌─────────────┐               │   │
+│   │   │  Gemini AI  │   │ Web Scraper │   │Legal Records│               │   │
+│   │   │  Extraction │   │  (Jina.ai)  │   │ SEC/IRS/SoS │               │   │
+│   │   └──────┬──────┘   └──────┬──────┘   └──────┬──────┘               │   │
 │   │          │                 │                 │                      │   │
 │   │          └─────────────────┼─────────────────┘                      │   │
 │   │                            ▼                                        │   │
@@ -81,20 +81,20 @@ Traditional sales intelligence tools have critical flaws:
 │   │              └────────────┬─────────────┘                           │   │
 │   │                           │                                         │   │
 │   └───────────────────────────┼─────────────────────────────────────────┘   │
-│                               │                                              │
+│                               │                                             │
 │       ┌───────────────────────┼───────────────────────┐                     │
 │       ▼                       ▼                       ▼                     │
-│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐                  │
-│  │   LinkedIn   │    │    Email     │    │    Intent    │                  │
-│  │ Verification │    │ Verification │    │   Signals    │                  │
-│  │   Service    │    │ (CF Worker)  │    │  Detection   │                  │
-│  │              │    │              │    │              │                  │
-│  │ • Profile    │    │ • MX Records │    │ • Hiring     │                  │
-│  │   Matching   │    │ • SPF/DMARC  │    │ • Funding    │                  │
-│  │ • Job Change │    │ • Deliverability│ │ • Tech Stack │                  │
-│  │   Detection  │    │ • Disposable │    │ • Expansion  │                  │
-│  └──────────────┘    └──────────────┘    └──────────────┘                  │
-│                                                                              │
+│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐                   │
+│  │   LinkedIn   │    │    Email     │    │    Intent    │                   │
+│  │ Verification │    │ Verification │    │   Signals    │                   │
+│  │   Service    │    │ (CF Worker)  │    │  Detection   │                   │
+│  │              │    │              │    │              │                   │
+│  │ • Profile    │    │ • MX Records │    │ • Hiring     │                   │
+│  │   Matching   │    │ • SPF/DMARC  │    │ • Funding    │                   │
+│  │ • Job Change │    │ • Deliverability│ │ • Tech Stack │                   │
+│  │   Detection  │    │ • Disposable │    │ • Expansion  │                   │
+│  └──────────────┘    └──────────────┘    └──────────────┘                   │
+│                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -204,46 +204,46 @@ Uses Google Gemini to intelligently extract structured data from unstructured we
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    EMAIL DISCOVERY WATERFALL                     │
+│                    EMAIL DISCOVERY WATERFALL                    │
 ├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  Stage 1: Website HTML Scraping                    Coverage: 30% │
-│  ├── mailto: links in contact pages                              │
-│  ├── data-email attributes in HTML                               │
+│                                                                 │
+│  Stage 1: Website HTML Scraping                   Coverage: 30% │
+│  ├── mailto: links in contact pages                             │
+│  ├── data-email attributes in HTML                              │
 │  ├── Obfuscated emails (at/dot notation)                        │
-│  └── Footer and header contact info                              │
-│                         ▼                                        │
-│  Stage 2: SEC EDGAR (Public Companies)             Coverage: 15% │
-│  ├── 10-K annual reports (executive contacts)                    │
-│  ├── DEF 14A proxy statements                                    │
-│  └── 8-K current reports                                         │
-│                         ▼                                        │
-│  Stage 3: IRS Form 990 (Nonprofits)                Coverage: 8%  │
-│  ├── ProPublica API (FREE)                                       │
-│  ├── Executive compensation section                              │
-│  └── Board member listings                                       │
-│                         ▼                                        │
-│  Stage 4: Secretary of State Records               Coverage: 10% │
-│  ├── Business registration filings                               │
-│  ├── Registered agent information                                │
-│  └── Officer/Director names                                      │
-│                         ▼                                        │
-│  Stage 5: Job Postings                             Coverage: 12% │
+│  └── Footer and header contact info                             │
+│                         ▼                                       │
+│  Stage 2: SEC EDGAR (Public Companies)            Coverage: 15% │
+│  ├── 10-K annual reports (executive contacts)                   │
+│  ├── DEF 14A proxy statements                                   │
+│  └── 8-K current reports                                        │
+│                         ▼                                       │
+│  Stage 3: IRS Form 990 (Nonprofits)               Coverage: 8%  │
+│  ├── ProPublica API (FREE)                                      │
+│  ├── Executive compensation section                             │
+│  └── Board member listings                                      │
+│                         ▼                                       │
+│  Stage 4: Secretary of State Records              Coverage: 10% │
+│  ├── Business registration filings                              │
+│  ├── Registered agent information                               │
+│  └── Officer/Director names                                     │
+│                         ▼                                       │
+│  Stage 5: Job Postings                            Coverage: 12% │
 │  ├── Careers page "Apply to:" emails                            │
-│  ├── HR/Recruiter contact emails                                 │
-│  └── Hiring manager names                                        │
-│                         ▼                                        │
-│  Stage 6: Press Releases                           Coverage: 10% │
-│  ├── Media contact information                                   │
-│  ├── PR agency contacts                                          │
-│  └── Executive quotes with contact info                          │
-│                         ▼                                        │
-│  Stage 7: Pattern Learning                         Coverage: 15% │
+│  ├── HR/Recruiter contact emails                                │
+│  └── Hiring manager names                                       │
+│                         ▼                                       │
+│  Stage 6: Press Releases                          Coverage: 10% │
+│  ├── Media contact information                                  │
+│  ├── PR agency contacts                                         │
+│  └── Executive quotes with contact info                         │
+│                         ▼                                       │
+│  Stage 7: Pattern Learning                        Coverage: 15% │
 │  ├── Find verified email (john.smith@company.com)               │
-│  ├── Learn pattern (firstname.lastname@domain)                   │
-│  └── Apply to remaining team members                             │
-│                                                                  │
-│  TOTAL COVERAGE: ~90% for executives, ~60% for managers          │
+│  ├── Learn pattern (firstname.lastname@domain)                  │
+│  └── Apply to remaining team members                            │
+│                                                                 │
+│  TOTAL COVERAGE: ~90% for executives, ~60% for managers         │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
