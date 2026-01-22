@@ -514,9 +514,9 @@ Confidence Scoring               None          Yes         ∞
 - [x] Legal email discovery
 - [x] Data freshness tracking
 - [ ] User authentication
-- [ ] CSV/CRM export
+- [x] CSV/CRM export
 - [ ] Chrome extension
-- [ ] Bulk processing API
+- [x] Bulk processing API
 
 ---
 
